@@ -70,8 +70,8 @@ async function openCategory(category) {
 function displayMessage() {
     if (messages.length > 0) {
         document.getElementById('messageText').textContent = messages[currentIndex];
-        // Show position in the shuffle cycle (optional: day number)
-        document.getElementById('dayNumber').textContent = shufflePosition + 1;
+        // Show actual index from JSON (1-based)
+        document.getElementById('dayNumber').textContent = currentIndex + 1;
     }
 }
 
